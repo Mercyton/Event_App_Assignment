@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: event-monolith-app
+    env: node
+    buildCommand: npm install
+    startCommand: node src/index.js
+    envVars:
+      - key: DATABASE_URL
+        value: your_neon_postgres_url
+      - key: JWT_SECRET
+        value: your_secret
